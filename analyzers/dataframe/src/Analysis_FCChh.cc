@@ -2315,6 +2315,10 @@ ROOT::VecOps::RVec<edm4hep::MCParticleData> AnalysisFCChh::get_truth_Higgs(
         higgs_list.push_back(truth_part);
       }
 
+      else if (decay.Contains("WW") && isW(child_1) && isW(child_2)) {
+        higgs_list.push_back(truth_part);
+      }
+
       else if (decay.Contains("bb") && isb(child_1) && isb(child_2)) {
         higgs_list.push_back(truth_part);
       }
